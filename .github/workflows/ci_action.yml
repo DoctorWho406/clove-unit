@@ -16,20 +16,12 @@ jobs:
       runs-on: ${{ matrix.os }}
       strategy:
         matrix:
-          os: [macos-latest, ubuntu-latest, windows-latest]
+          os: [macos-11]
           include:
-            - os: macos-latest
+            - os: macos-11
               SHELL: bash
               SEP: /
               LS_CMD: ls -la
-            - os: ubuntu-latest
-              SHELL: bash
-              SEP: /
-              LS_CMD: ls -la
-            - os: windows-latest
-              SHELL: cmd
-              SEP: \
-              LS_CMD: dir /a
       defaults:
         run:
           shell: ${{ matrix.SHELL }}

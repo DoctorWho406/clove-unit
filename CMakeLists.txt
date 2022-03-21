@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.18)
-project(CLoveUnit LANGUAGES C)
+project(CLoveUnit LANGUAGES CXX)
 include(CTest)
 
 add_subdirectory(tests)

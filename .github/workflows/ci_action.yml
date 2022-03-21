@@ -31,7 +31,9 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v2
         - name: List Workspace
-          run:  ${{matrix.LS_CMD}} ${{ github.workspace }}
+          run:  |
+            ${{matrix.LS_CMD}} ${{ github.workspace }}
+            ls -la /Applications
         - name: Compile
           run: |
             echo "== CMAKE VERSION =="

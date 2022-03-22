@@ -7,3 +7,6 @@ file(GLOB_RECURSE SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 add_executable(CLoveUnitTest ${SOURCES} ../clove-unit.h)
 target_include_directories(CLoveUnitTest PRIVATE ../)
 set_property(TARGET CLoveUnitTest PROPERTY CXX_STANDARD 11)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+
